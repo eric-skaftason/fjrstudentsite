@@ -12,7 +12,7 @@
     <title>Father John Redmond</title>
 
     <meta name="description"
-        content="Riverview High School — nurturing excellence in academics, arts, and athletics." />
+        content="" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,8 +23,8 @@
 
 <body>
 
-    <script src="./components/auth.js"></script>
-    <script src="./components/page_header.js"></script>
+    <script src="/components/auth.js"></script>
+    <script src="/components/page_header/page_header.js"></script>
 
     <a class="skip-link btn" href="#main"
         style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
@@ -71,10 +71,6 @@
     </header>
     -->
 
-
-
-
-
     <!-- MAIN -->
     <main id="main">
 
@@ -97,12 +93,10 @@
                     <div class="illustration" aria-hidden="true">
                         <div class="chalkboard">
                             <div>
-                                <h2>October 2025</h2>
+                                <h2>FJR Website</h2>
                                 <p style="text-align:center; margin:0; color:#ffffff">
-                                    <b>Latin Hispanic Canadian Heritage Month</b><br>
-                                    Autism Awareness Month<br>
-                                    Islamic Heritage Month<br>
-                                    Virtue of the Month: <b>Gratitude</b>
+                                    Welcome the the FJR student website,
+                                    created by the Computer Science club.
                                 </p>
                             </div>
                         </div>
@@ -121,7 +115,7 @@
 
             </div>
 
-            <div style="display:flex; gap:2rem; display:grid; place-items:center; flex-wrap:wrap;">
+            <!-- <div style="display:flex; gap:2rem; display:grid; place-items:center; flex-wrap:wrap;">
                 <div>
                     <br>
                     <a href="./clubs.html" class="btn primary" style="background:#c52222; color:#ffffff;">Join A Club</a>
@@ -130,13 +124,13 @@
                         Explore Academics
                     </a>
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <!-- ABOUT -->
-        <section id="about">
+        <section id="fjr_info">
             <div class="container">
-                <h2 class="section-title">About Us</h2>
+                <h2 class="section-title">FJR Information</h2>
                 <p class="muted"></p>
 
                 <br>
@@ -144,201 +138,66 @@
                 <div class="cards" style="margin-top:1rem">
 
                     <article class="card">
-                        <div class="icon" aria-hidden="true">US</div>
-                        <h3>Our Club</h3>
-                        <p><a href="./clubs.html">See Club Page</a></p>
+                        <div class="card_head" style="display: flex; flex-direction: row;">
+                            <div class="icon" aria-hidden="true">📷</div>
+                            <h3><a href="/clubs/clubs.html">Clubs</a></h3>
+                        </div>
+            
+                        <p>A directory of clubs at FJR.</p>
                     </article>
 
                     <article class="card">
-                        <div class="icon" aria-hidden="true">🎨</div>
-                        <h3>Our Gallery</h3>
-                        <p><a href="#gallery">See Gallery</a></p>
+                        <div class="card_head" style="display: flex; flex-direction: row;">
+                            <div class="icon" aria-hidden="true">📷</div>
+                            <h3><a href="/gallery/gallery.html">Gallery</a></h3>
+                        </div>
+                        
+            
+                        <p>Observe a collection of photos.</p>
                     </article>
 
                 </div>
             </div>
         </section>
 
-        <!-- ACADEMICS -->
-        <section id="academics" aria-labelledby="academics-title">
+        <!-- MISC -->
+        <section id="cs_club">
             <div class="container">
-                <h2 id="academics-title" class="section-title">Information</h2>
+                <h2 id="cs_club-title" class="section-title">Miscellaneous Things</h2>
 
                 <div class="cards">
-
-                    <!-- AP -->
                     <article class="card">
-                        <div class="icon" aria-hidden="true">AP+</div>
-                        <h3>Advanced Placement</h3>
-                        <p>
-                            G11–12 AP Test Join <b>Google Classroom</b><br>
-                            <u>*Deadline for S1 AP Exam Courses: Friday, November 7th, 3:00 p.m.</u><br>
-                            Code: <a href="https://classroom.google.com/">27ecpdt</a>
-                        </p>
-                        <button id="myInput" class="btn" onclick="myFunction()">Copy Contact Email</button>
-                    </article>
-
-                    <!-- Athletics -->
-                    <article class="card">
-                        <div class="icon" aria-hidden="true">🏅</div>
-                        <h3>Athletics & Fitness</h3>
-                        <p>
-                            Our school <b>Fitness Centre</b><br>
-                            Opens on Monday, September 15th.<br>
-                            <u>Instagram</u>:
-                        </p>
-                        <button class="btn" onclick="myFunction2()">
-                            <a href="https://www.instagram.com/">@fjr_athletics</a>
-                        </button>
-                        <br><br>
-                        <a class="btn" href="https://linktr.ee/fjr_athletics_">Athletics Website</a>
-                    </article>
-
-                    <!-- Grade 9 -->
-                    <article class="card">
-                        <div class="icon" aria-hidden="true">🎓</div>
-                        <h3>Grade Nine</h3>
-                        <p>
-                            For <b>G9</b> students,<br>
-                            Join Google Classroom to see more information.<br>
-                            Code: <a href="https://classroom.google.com/">cdnmzh5h</a>
-                        </p>
-                        <p><u>Instagram</u>:</p>
-                        <button class="btn" onclick="myFunction3()">
-                            <a href="https://www.instagram.com/">@redhawk.seniors</a>
-                        </button>
-                        <br><br>
-                    </article>
-
-                    <!-- Grade 10 -->
-                    <article class="card">
-                        <div class="icon" aria-hidden="true">🎓</div>
-                        <h3>Grade Ten</h3>
-                        <p>
-                            For <b>G10</b> students,<br>
-                            Join Google Classroom to see more information.<br>
-                            Code: <a href="https://classroom.google.com/">k54ivsp</a>
-                        </p>
-                        <p><u>Instagram</u>:</p>
-                        <button class="btn" onclick="myFunction3()">
-                            <a href="https://www.instagram.com/">@redhawk.seniors</a>
-                        </button>
-                        <br><br>
-                    </article>
-
-                    <!-- Seniors -->
-                    <article class="card">
-                        <div class="icon" aria-hidden="true">🎓</div>
-                        <h3>FJR Seniors</h3>
-                        <p>
-                            For <b>G11–G12</b> students,<br>
-                            Join Google Classroom to see more information.<br>
-                            Code: <a href="https://classroom.google.com/">rejzi2sc</a>
-                        </p>
-                        <p><u>Instagram</u>:</p>
-                        <button class="btn" onclick="myFunction3()">
-                            <a href="https://www.instagram.com/">@redhawk.seniors</a>
-                        </button>
-                        <br><br>
-                    </article>
-
-                    <!-- Events -->
-                    <article class="card">
-                        <div class="icon" aria-hidden="true">🌞</div>
-                        <h3>FJR Events</h3>
-                        <p>Please go on our Instagram account for the latest news and updates.</p>
-                        <p><u>Instagram</u>:</p>
-                        <button class="btn" onclick="myFunction4()">
-                            <a href="https://www.instagram.com/">@fatherjohnredmond</a>
-                        </button>
-                        <br><br>
-                        <a class="btn" href="https://linktr.ee/fjrstudentcouncil">Student Council Website</a>
-                    </article>
-
-                    <!-- Faculty Contacts -->
-                    <article class="card">
-                        <div class="icon" aria-hidden="true">🌞</div>
-                        <h3>FJR Faculty Contact</h3>
-                        <p>Forget your teacher's email? Check:</p>
-                        <a class="btn"
-                            href="https://assets.tcdsb.org/fatherjohnredmond/2515924/faculty-list.pdf">
-                            All Faculty Contacts
-                        </a>
+                        <div class="card_head" style="display: flex; flex-direction: row;">
+                            <div class="icon" aria-hidden="true"></div>
+                            <h3><a href="/misc/loading.html">Accomplishments of the CS Club.</a></h3>
+                        </div>
+                        
+            
+                        <p></p>
                     </article>
 
                 </div>
             </div>
         </section>
 
-        <!-- NEWS -->
-        <section id="news">
+        <!-- CS CLUB -->
+        <section id="cs_club">
             <div class="container">
-                <h2 class="section-title">News & Events</h2>
+                <h2 id="cs_club-title" class="section-title">Computer Science Club Projects</h2>
 
-                <div class="list" role="list">
-
-                    <article class="list-item" role="listitem">
-                        <div class="badge">News</div>
-                        <div>
-                            <h3>#########</h3>
-                            <p class="date">Sep 10–15</p>
-                            <p>----------</p>
+                <div class="cards">
+                    <article class="card">
+                        <div class="card_head" style="display: flex; flex-direction: row;">
+                            <div class="icon" aria-hidden="true">🌐</div>
+                            <h3><a href="/clubs/clubs.html">Website</a></h3>
                         </div>
-                    </article>
+            
+                        <p>
+                            The CS Club is working on https://www.fjrstudentsite.com.
+                            This website contains information about FJR and the CS Club.
 
-                    <article class="list-item" role="listitem">
-                        <div class="badge" style="background:#dcfce7; color:#166534; border-color:#bbf7d0">
-                            Event
-                        </div>
-                        <div>
-                            <h3>#########</h3>
-                            <p class="date">Sep 10–15</p>
-                            <p>----------</p>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- DYNAMIC NEWS -->
-        <section id="news">
-            <div class="container">
-                <article class="list-item" role="listitem">
-
-                    <div class="list" id="newsDynamicList" role="list" aria-live="polite"></div>
-
-                    <div class="list" id="eventsList" role="list" aria-live="polite"></div>
-
-                </article>
-            </div>
-        </section>
-
-        <!-- FACULTY -->
-        <section id="faculty">
-            <div class="container">
-                <h2 class="section-title">Faculty Spotlight</h2>
-
-                <div class="list">
-
-                    <article class="list-item">
-                        <img src="" alt="" aria-hidden="true"
-                            style="width:84px;height:84px;border-radius:10px;background:linear-gradient(135deg,#dbeafe,#93c5fd);border:1px solid #e5e7eb">
-                        <div>
-                            <h3>Mr.###</h3>
-                            <p class="muted">**********</p>
-                            <p>-------------------------</p>
-                        </div>
-                    </article>
-
-                    <article class="list-item">
-                        <img src="" alt="" aria-hidden="true"
-                            style="width:84px;height:84px;border-radius:10px;background:linear-gradient(135deg,#fde68a,#fca5a5);border:1px solid #e5e7eb">
-                        <div>
-                            <h3>Ms.###</h3>
-                            <p class="muted">**********</p>
-                            <p>-------------------------</p>
-                        </div>
+                            The club is currently led by Milai (Iris) Zhang.
+                        </p>
                     </article>
 
                 </div>
@@ -346,7 +205,8 @@
         </section>
 
         <!-- GALLERY -->
-        <section id="gallery">
+        <!-- hidden until pics are added -->
+        <section id="gallery" hidden>
             <div class="container">
                 <h2 class="section-title">Work Gallery</h2>
                 <p class="muted">
@@ -425,58 +285,6 @@
 
         </div>
     </footer>
-
-    <!-- SCRIPTS -->
-    <script>
-        // Mobile menu toggle
-        const toggle = document.querySelector('.menu-toggle');
-        const menu = document.getElementById('menu');
-
-        toggle?.addEventListener('click', () => {
-            const open = menu.classList.toggle('open');
-            toggle.setAttribute('aria-expanded', String(open));
-        });
-
-        // Close on link click
-        menu?.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A' && menu.classList.contains('open')) {
-                menu.classList.remove('open');
-                toggle.setAttribute('aria-expanded', 'false');
-            }
-        });
-
-        // Current year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Skip link visibility
-        const skip = document.querySelector('.skip-link');
-        skip.addEventListener('focus', () => {
-            skip.style.position = 'static';
-            skip.style.width = 'auto';
-            skip.style.height = 'auto';
-        });
-        skip.addEventListener('blur', () => {
-            skip.style.position = 'absolute';
-            skip.style.left = '-9999px';
-            skip.style.width = '1px';
-            skip.style.height = '1px';
-        });
-
-        function myFunction() {
-            navigator.clipboard.writeText("Stephen.strong@tcdsb.org");
-            alert("Copied to clipboard ");
-        }
-
-        function myFunction2() {
-            navigator.clipboard.writeText("@fjr_athletics_");
-            alert("Copied to clipboard ");
-        }
-
-        function myFunction3() {
-            navigator.clipboard.writeText("@redhawk.seniors");
-            alert("Copied to clipboard ");
-        }
-    </script>
 
     <!-- External JS -->
     <script src="index.js"></script>

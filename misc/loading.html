@@ -1,131 +1,76 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
 
-    <link rel="stylesheet" href="/styles.css?v=1.1">
+    <script src="/components/progress_bar/progress_bar.js"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Father John Redmond</title>
-
-    <meta name="description"
-        content="Riverview High School — nurturing excellence in academics, arts, and athletics." />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap"
-        rel="stylesheet">
-
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
-
 <body>
+    <progress-bar
+        id="progress"
+        data-calibration='{
+        }'
+        width="400"
+        height="20"
+        containerColor="rgb(168, 168, 168)"
+        barColor="#1880ff"
+    >
+    </progress-bar>
+    <p>Loading <span id="dot3"></span></p>
 
-    <script src="../components/auth.js"></script>
-    <script src="../components/page_header.js"></script>
+    <script>
+        const progress_bar = document.querySelector('#progress');
 
+        function setCheckpoints() {
+            const transition = (() => {
+                const options = ['ease', 'linear', 'steps(10, start)', 'steps(10, end)'];
+                const index = Math.floor(Math.random() * options.length);
 
-    <!-- HEADER -->
+                return options[index];
+            })();
 
-    <page-header></page-header>
+            const percent = Math.floor(Math.random() * 100);
+            const ms = Math.random() * 8000 + 2000; // 2 - 10 sec
+            let checkpoints = JSON.parse(progress_bar.getAttribute('data-calibration'))?.checkpoints || [];
+            checkpoints.push([percent, ms, transition]);
 
-    <!--
-    <header>
-        <div class="container nav">
+            const data_calibration = {checkpoints: checkpoints};
+            progress_bar.setAttribute('data-calibration', JSON.stringify(data_calibration));
 
-            <a class="brand" href="/index.html" aria-label="Home">
-                <img class="logo"
-                    src="https://is3-ssl.mzstatic.com/image/thumb/Purple116/v4/58/38/5c/58385c79-8638-c9a5-f92d-e3a8bb3a4a08/source/512x512bb.jpg$0"
-                    aria-hidden="true">
-                <span>Father John Redmond</span>
-            </a>
+            setTimeout(setCheckpoints, ms);
+        }
 
-            <button class="menu-toggle" aria-expanded="false" aria-controls="menu">
-                <span></span><span></span><span></span>
-                <span class="sr-only" style="position:absolute;left:-9999px">Toggle menu</span>
-            </button>
+        setCheckpoints();
 
-            <nav aria-label="Primary">
-                <ul id="menu">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#academics">Info</a></li>
-                    <li><a href="calendar.html">Events&News</a></li>
-                    <li><a href="#faculty">Faculty</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li>
-                        <a href="contact.html" class="btn primary"
-                            style="background:#ffffff; color:#c52222; border:1px solid #c52222">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        setInterval(() => {
+            const dot3 = document.querySelector('#dot3');
 
-        </div>
-    </header>
-    -->
+            let text = dot3.innerText;
+            if (text.length === 3) {
+                text = '';
+            } else {
+                text += '.';
+            }
 
-    <main>
+            dot3.innerText = text;
+        }, 500);
 
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container" id="finalPage">
-
-            <div class="footer-grid">
-
-                <div>
-                    <div class="brand" style="color:#e5eef7">
-                        <img class="logo"
-                            src="https://is3-ssl.mzstatic.com/image/thumb/Purple116/v4/58/38/5c/58385c79-8638-c9a5-f92d-e3a8bb3a4a08/source/512x512bb.jpg$0"
-                            aria-hidden="true">
-                        <span>Father John Redmond</span>
-                    </div>
-                    <p style="color:#c2d3e6">
-                        Building character, curiosity, and community.
-                    </p>
-                </div>
-
-                <div>
-                    <h4>Explore</h4>
-                    <ul style="list-style:none; padding:0; margin:0">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#academics">Academics</a></li>
-                        <li><a href="#news">News</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Resources</h4>
-                    <ul style="list-style:none; padding:0; margin:0">
-                        <li><a href="#">Parent Portal</a></li>
-                        <li><a href="#">Student Handbook</a></li>
-                        <li><a href="#">Counseling</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Contact</h4>
-                    <ul style="list-style:none; padding:0; margin:0">
-                        <li>*******</li>
-                        <li>*******</li>
-                        <li>(***)***-****</li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="copyright">
-                © <span id="year"></span> Father John Redmond High School.
-            </div>
-
-        </div>
-    </footer>
-
-    
-
+        
+    </script>
 </body>
-
 </html>
